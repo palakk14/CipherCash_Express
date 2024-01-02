@@ -29,17 +29,7 @@ The CipherCash Express is a Python-based web application designed for secure fun
 
 ## 3. File Structure
 
-  CipherCash Express
-├── _init_.py
-├── _pycache_
-│   ├── _init_.cpython-311.pyc
-│   ├── auth.cpython-311.pyc
-│   ├── consistency_checks.cpython-311.pyc
-│   ├── database.cpython-311.pyc
-│   ├── encryption.cpython-311.pyc
-│   ├── main.cpython-311.pyc
-│   ├── user_interface.cpython-311.pyc
-│   └── utils.cpython-311.pyc
+CipherCash Express
 ├── accounts.csv
 ├── auth.py
 ├── consistency_checks.py
