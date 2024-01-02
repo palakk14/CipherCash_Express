@@ -1,0 +1,30 @@
+<!-- templates/transfer_amount.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Fund Transfer Amount</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Transfer Amount</h1>
+        <form action="{{ url_for('transfer') }}" method="post">
+            <label for="sender_account">Sender's Account:</label>
+            <input type="number" id="sender_account_number" name="sender_account_number" value="{{ sender_account_number}}">
+            
+            <label for="recipient_account">Recipient's Account:</label>
+            <input type="number" id="recipient_account_number" name="recipient_account_number" value="{{ recipient_account_number }}">
+            
+         
+            
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" min="0" step="0.01" required>
+
+            <button type="submit">Transfer Funds</button>
+        </form>
+    </div>
+</body>
+</html>

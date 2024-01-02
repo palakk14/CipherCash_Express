@@ -1,0 +1,35 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Transfer System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>CipherCash Express</h1>
+    
+    <h2>Enter Your Information</h2>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form action="{{ url_for('user_info') }}" method="post">
+        <label for="Sender_Name">Sender Name:</label>
+        <input type="text" id="sender_account_name" name="sender_account_name" required>
+        
+        <label for="sender_account_number">Sender Account Number:</label>
+        <input type="number" id="sender_account_number" name="sender_account_number" required>
+        
+        <label for="sender_phone_number">Sender Phone Number:</label>
+        <input type="number" id="sender_phone_number" name="sender_phone_number" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Authenticate</button>
+    </form>
+</body>
+</html>

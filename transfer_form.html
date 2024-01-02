@@ -1,0 +1,25 @@
+<!-- templates/transfer_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Fund Transfer Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Fund Transfer Form</h1>
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+        <form action="{{ url_for('transfer_form') }}" method="post">
+            <label for="recipient_account">Recipient Account:</label>
+            <input type="text" id="recipient_account" name="recipient_account" required>
+
+            <button type="submit">Next</button>
+        </form>
+    </div>
+</body>
+</html>
